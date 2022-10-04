@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .first {
+            position: relative;
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background: rgb(199, 220, 137);
+            background: linear-gradient(308deg, rgba(199, 220, 137, 1) 0%,
+                    rgba(255, 255, 255, 0) 40%);
+            border-radius: 50%;
+            transition: all;
+            animation: move 1.2s linear infinite;
+        }
+
+        .back {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 194px;
+            height: 194px;
+            background: rgb(0, 0, 0);
+            border-radius: 50%;
+        }
+
+        @keyframes move {
+            0% {
+                --percent: 0;
+            }
+
+            25% {
+                transform: rotate(90deg);
+                background: rgb(170, 215, 107);
+                background: linear-gradient(308deg, rgb(170, 215, 107, 1)0%,
+                        rgba(255, 255, 255, 0) 40%);
+            }
+
+            50% {
+                transform: rotate(180deg);
+                background: rgb(101, 195, 78);
+                background: linear-gradient(308deg, rgba(101, 195, 78, 1) 0%,
+                        rgba(255, 255, 255, 0) 40%);
+            }
+
+            75% {
+                transform: rotate(270deg);
+                background: rgb(170, 215, 107);
+                background: linear-gradient(308deg, rgba(170, 215, 107, 1) 0%,
+                        rgba(255, 255, 255, 0) 40%);
+            }
+
+            100% {
+                transform: rotate(360deg);
+                background: rgb(199, 220, 137);
+                background: linear-gradient(308deg, rgb(199, 220, 137) 0%,
+                        rgba(255, 255, 255, 0) 40%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <div class="back"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .one {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(rgb(255, 181, 34), rgb(220, 220, 49), rgb(46, 228, 204), rgb(206, 37, 248), transparent 240deg);
+            transition: all;
+            animation: move 1.2s linear infinite;
+        }
+        .one::after{
+            position: absolute;
+            content: '';
+            display: block;
+            top: 0px;
+            left: 99px;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: rgb(255, 181, 34);
+        }
+
+        .two {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 196px;
+            height: 196px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        @keyframes move{
+            0%{}
+            100%{
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+</body>
+
+</html>
